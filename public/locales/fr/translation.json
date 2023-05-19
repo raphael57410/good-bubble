@@ -1,0 +1,17 @@
+{
+    "home": {
+        "homeText": "Trouver facilement et rapidement toutes les offres des centres de plongée dans le monde",
+        "input": "Rechercher un post"
+    },
+    "addFormPlaceholder": {
+        "title": "titre",
+        "email": "email",
+        "img": "image",
+        "description": "description"
+    },
+    "button": {
+        "send": "Envoyer",
+        "back": "Retour",
+        "addPost": "Ajouter un post"
+    }
+}

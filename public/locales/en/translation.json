@@ -1,0 +1,17 @@
+{
+    "home": {
+        "homeText": "Find easily and quickly all the offers of the diving centers in the world",
+        "input": "Search a post"
+    },
+    "addFormPlaceholder": {
+        "title": "title",
+        "email": "email",
+        "img": "image",
+        "description": "description"
+    },
+    "button": {
+        "send": "Send",
+        "back": "Back",
+        "addPost": "Add a new post"
+    }
+}

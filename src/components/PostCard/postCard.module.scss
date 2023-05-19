@@ -1,0 +1,32 @@
+.container {
+    padding: 15px;
+    width: 334px;
+    height: 430px;
+    background: #213547;
+    border-radius: 31px;
+    color: white;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation: displayCard 2s ease;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes displayCard {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        width: .33;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

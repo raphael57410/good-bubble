@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 500px;
+    background: white;
+    border-radius: 20px;
+
+
+    .input {
+        width: -webkit-fill-available;
+    }
+
+    .errorMessage {
+        color: red;
+    }
+
+    .addPostFormButtonContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        .button {
+            margin: 5px;
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+.presentation {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    background-color: #213547;
+    color: white;
+    height: 545px;
+}
+
+.text {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.postContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.inputContainer {
+    width: 100%;
+
+    .input {
+        width: 50%;
+    }
+}

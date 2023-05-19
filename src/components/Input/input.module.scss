@@ -1,0 +1,14 @@
+.container {
+    padding: 10px;
+
+    .input {
+        padding: 10px;
+        border: 1px solid #67A2C3;
+        border-radius: 26.5px;
+        outline: none;
+
+        &:focus {
+            border: 1px solid #213547;
+        }
+    }
+}
