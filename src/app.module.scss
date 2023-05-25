@@ -1,9 +1,11 @@
+@use 'variables' as v;
+
 .presentation {
     display: flex;
     flex-direction: column;
     place-items: center;
     place-content: center;
-    background-color: #213547;
+    background-color: v.$primary;
     color: white;
     height: 545px;
 }
