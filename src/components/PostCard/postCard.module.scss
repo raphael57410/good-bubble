@@ -9,6 +9,14 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: displayCard 2s ease;
     overflow: scroll;
+
+    .imageContainer {
+        width: 100%;
+
+        img {
+            width: 50%;
+        }
+    }
 }
 
 ::-webkit-scrollbar {

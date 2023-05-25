@@ -25,7 +25,7 @@ function AddPostForm({ refetchFn }: Props) {
     });
     const onSubmit = async (data: any) => {
 
-        const isPosted = await postNewPost('http://127.0.0.1:33961/posts', data);
+        const isPosted = await postNewPost("http://127.0.0.1:3001/api/post/addPost", data);
 
         if (isPosted) {
             setIsOpen(false);

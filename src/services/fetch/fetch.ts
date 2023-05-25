@@ -1,6 +1,6 @@
 import { Post } from "../../App";
 
-export async function postNewPost(url = "", newPost: Post) {
+export async function postNewPost(url: string, newPost: Post) {
 
     const formData = new FormData();
 
@@ -8,7 +8,6 @@ export async function postNewPost(url = "", newPost: Post) {
     formData.append("email", newPost.email);
     formData.append("image", newPost.image);
     formData.append("description", newPost.description);
-
 
     const response = await fetch(url, {
         method: "POST",

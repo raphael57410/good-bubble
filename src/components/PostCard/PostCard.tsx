@@ -9,11 +9,14 @@ type Props = {
 
 function PostCard({ title, email, img, description }: Props) {
 
+
     return (
         <div className={styles.container}>
             <h2>{title}</h2>
             <p>{email}</p>
-            <div>{img}</div>
+            <div className={styles.imageContainer}>
+                <img src={`http://127.0.0.1:3001/static/${img}`} alt='post_image'></img>
+            </div>
             <p>{description}</p>
         </div>
     )
