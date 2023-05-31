@@ -1,5 +1,12 @@
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 300px;
     width: 100vw;
     background: #213547;
+
+    .text {
+        color: aliceblue;
+    }
 }

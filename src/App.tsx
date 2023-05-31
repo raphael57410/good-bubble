@@ -52,14 +52,16 @@ function App() {
         />
       </div>
 
-      {!filteredPost && <div className={styles.presentation}>
-        <p className={styles.text}>
-          {t('home.homeText')}
-        </p>
-        <ButtonContainer>
-          <Button onClick={() => setIsOpen(!isOpen)} text={t<string>('button.addPost')} />
-        </ButtonContainer>
-      </div>}
+      {!filteredPost &&
+        <div className={styles.presentation}>
+          <p className={styles.text}>
+            {t('home.homeText')}
+          </p>
+          <ButtonContainer>
+            <Button onClick={() => setIsOpen(!isOpen)} text={t<string>('button.addPost')} />
+          </ButtonContainer>
+        </div>
+      }
 
       <div className={styles.postContainer}>
         {posts.length > 0 && (filteredPostArray.length ? filteredPostArray : posts).map((post, index) => <PostCard key={index} title={post.title} email={post.email} img={post.image} description={post.description} />)}
