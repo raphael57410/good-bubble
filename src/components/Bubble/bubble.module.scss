@@ -1,0 +1,102 @@
+.bubbleContainer {
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+
+    .bubble {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        right: 100px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px rgba(33, 53, 71, 1);
+        animation: animate 8s ease-in-out infinite;
+        transform: scale(1.1);
+        pointer-events: none;
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                transform: translateY(-10px);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            z-index: 10;
+            filter: blur(2px);
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: white;
+            z-index: 10;
+            filter: blur(2px);
+
+        }
+
+        @for $i from 1 to 50 {
+            &:nth-child(#{$i}) {
+                position: absolute;
+                zoom: 0.45;
+
+                @if $i < 25 {
+                    left: random($i) * 100px;
+                }
+
+                @else {
+                    right: random($i) * 100px;
+                }
+
+                @if $i >random($i) {
+                    top: random($i) * 50px;
+                }
+
+                @else {
+                    bottom: random($i) * 50px;
+                }
+
+                animation-delay: random($i)+"s";
+            }
+        }
+    }
+
+    .bubble>span {
+        position: absolute;
+        border-radius: 50%;
+
+        &:nth-child(1) {
+            inset: 1px;
+            border-left: 3px solid #0fb4ff;
+            filter: blur(4px);
+        }
+
+        &:nth-child(2) {
+            inset: 1px;
+            border-right: 3px solid #ff4484;
+            filter: blur(3px);
+        }
+    }
+}

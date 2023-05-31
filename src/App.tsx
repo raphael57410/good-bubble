@@ -13,6 +13,8 @@ import { useAddStore } from './store/addStore';
 import AddPostForm from './components/Form/AddPostForm/AddPostForm';
 import FilteredInput from './components/Input/FilteredInput/FilteredInput';
 import { useQueryGetAllPosts } from './services/post.query';
+import Bubble from './components/Bubble/Bubble';
+import Header from './components/Header/Header';
 
 export type Post = {
   title: string;
@@ -42,7 +44,14 @@ function App() {
   return (
     <>
       {isOpen && <AddPostForm refetchFn={refetch} />}
-      <Title text={"Good Bubble"} />
+      <Header>
+        <Title text={"Good Bubble"} />
+        <div>
+          <ul>
+            <li>laaa</li>
+          </ul>
+        </div>
+      </Header>
       <div className={styles.inputContainer}>
         <FilteredInput
           customStyle={styles.input}
@@ -54,6 +63,7 @@ function App() {
 
       {!filteredPost &&
         <div className={styles.presentation}>
+          <Bubble />
           <p className={styles.text}>
             {t('home.homeText')}
           </p>

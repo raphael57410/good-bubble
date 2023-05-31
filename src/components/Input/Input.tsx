@@ -13,7 +13,7 @@ type Props = {
 }
 
 const Input = React.forwardRef(({ value, onChange, placeholder, customStyle, type }: Props, props: any) => {
-    const [focusInput, setFocusInput] = useState(true);
+    const [_focusInput, setFocusInput] = useState(true);
 
 
     return (

@@ -15,7 +15,7 @@ type Props = {
 function AddPostForm({ refetchFn }: Props) {
     const { t } = useTranslation();
     const [setIsOpen] = useAddStore((state) => [state.setIsOpen]);
-    const { handleSubmit, control, reset, formState: { errors } } = useForm({
+    const { handleSubmit, control, formState: { errors } } = useForm({
         defaultValues: {
             title: "",
             email: "",
