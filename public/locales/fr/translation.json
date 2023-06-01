@@ -3,6 +3,10 @@
         "homeText": "Trouver facilement et rapidement toutes les offres des centres de plongée dans le monde",
         "input": "Rechercher un post"
     },
+    "form": {
+        "requiredText": "Champs obligatoire.",
+        "emailInvalidText": "Adresse e-mail invalide"
+    },
     "addFormPlaceholder": {
         "title": "titre",
         "email": "email",
@@ -13,5 +17,12 @@
         "send": "Envoyer",
         "back": "Retour",
         "addPost": "Ajouter un post"
+    },
+    "burgerMenuButton": {
+        "open": "Menu",
+        "close": "Fermer"
+    },
+    "footer": {
+        "text": "Tous droits réservés © Raphaël demmerle 2023"
     }
 }

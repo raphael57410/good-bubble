@@ -1,0 +1,71 @@
+@use '../../../variables' as V;
+
+.bugerMenuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    .burgerMenuButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+
+        .open {
+            .barBurger1 {
+                transform: rotate(45deg) translate(4px, 4px);
+            }
+
+            .barBurger2 {
+                opacity: 0;
+            }
+        }
+
+        .barBurger1 {
+            width: 30px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: V.$secondary;
+            transition: transform 0.3s ease;
+        }
+
+        .barBurger1Open {
+            width: 30px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: V.$primary;
+            transition: transform 0.3s ease;
+            transform: rotate(45deg) translate(3px, 3px);
+        }
+
+        .barBurger3Open {
+            width: 30px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: V.$primary;
+            transition: transform 0.3s ease;
+            transform: rotate(-45deg) translate(3px, -3px);
+        }
+
+        .barBurger2 {
+            width: 30px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: V.$secondary;
+            transition: transform 0.3s ease;
+
+        }
+
+        .barBurger3 {
+            width: 30px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: V.$secondary;
+            transition: transform 0.3s ease;
+
+        }
+    }
+
+}

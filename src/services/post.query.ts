@@ -1,5 +1,5 @@
 import { useQuery } from "react-query"
-import { Post } from "../App"
+import { Post } from "../Pages/Home/App"
 
 export const useQueryGetAllPosts = () => {
 

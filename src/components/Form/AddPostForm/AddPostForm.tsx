@@ -42,28 +42,33 @@ function AddPostForm({ refetchFn }: Props) {
                     rules={{ required: true }}
                     render={({ field }) => <Input {...field} customStyle={styles.input} value={field.value} placeholder={t<string>("addFormPlaceholder.title")} onChange={field.onChange} />}
                 />
-                {errors.title && <span className={styles.errorMessage}>This is required.</span>}
+                {errors.title && <span className={styles.errorMessage}>{t<string>("form.requiredText")}</span>}
                 <Controller
                     name="email"
                     control={control}
-                    rules={{ required: true }}
+                    rules={{
+                        required: true, pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: t<string>("form.emailInvalidText"),
+                        }
+                    }}
                     render={({ field }) => <Input {...field} customStyle={styles.input} value={field.value} placeholder={t<string>("addFormPlaceholder.email")} onChange={field.onChange} />}
                 />
-                {errors.email && <span className={styles.errorMessage}>This is required.</span>}
+                {errors.email && <span className={styles.errorMessage}>{t<string>("form.requiredText")}</span>}
                 <Controller
                     name="image"
                     control={control}
                     rules={{ required: true }}
                     render={({ field }) => <ImagePicker {...field} />}
                 />
-                {errors.image && <span className={styles.errorMessage}>This is required.</span>}
+                {errors.image && <span className={styles.errorMessage}>{t<string>("form.requiredText")}</span>}
                 <Controller
                     name="description"
                     control={control}
                     rules={{ required: true }}
                     render={({ field }) => <Input {...field} customStyle={styles.input} value={field.value} placeholder={t<string>("addFormPlaceholder.description")} onChange={field.onChange} />}
                 />
-                {errors.description && <span className={styles.errorMessage}>This is required.</span>}
+                {errors.description && <span className={styles.errorMessage}>{t<string>("form.requiredText")}</span>}
                 <div className={styles.addPostFormButtonContainer}>
                     <Button type='button' customStyles={styles.button} text={t<string>('button.send')} onClick={() => { handleSubmit(onSubmit)() }} />
                     <Button customStyles={styles.button} text={t<string>('button.back')} onClick={() => setIsOpen(false)} />

@@ -1,4 +1,8 @@
-@use 'variables' as v;
+@use '../../variables' as v;
+
+.home {
+    overflow-y: hidden;
+}
 
 .presentation {
     display: flex;
@@ -28,4 +32,9 @@
     .input {
         width: 50%;
     }
+}
+
+.lockScroll {
+    overflow: hidden;
+    position: fixed;
 }

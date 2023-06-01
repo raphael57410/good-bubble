@@ -1,4 +1,4 @@
-import { Post } from "../../App";
+import { Post } from "../../Pages/Home/App";
 
 export async function postNewPost(url: string, newPost: Post) {
 

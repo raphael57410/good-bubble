@@ -3,6 +3,10 @@
         "homeText": "Find easily and quickly all the offers of the diving centers in the world",
         "input": "Search a post"
     },
+    "form": {
+        "requiredText": "This is required.",
+        "emailInvalidText": "Invalid e-mail address"
+    },
     "addFormPlaceholder": {
         "title": "title",
         "email": "email",
@@ -13,5 +17,12 @@
         "send": "Send",
         "back": "Back",
         "addPost": "Add a new post"
+    },
+    "burgerMenuButton": {
+        "open": "Menu",
+        "close": "Close"
+    },
+    "footer": {
+        "text": "All rights reserved © Raphaël demmerle 2023"
     }
 }
