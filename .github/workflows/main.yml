@@ -1,23 +1,18 @@
 name: Mise à jour du serveur
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Vérifier les modifications
       uses: actions/checkout@v2
-      
     - name: Installer sshpass
       run: |
         sudo apt-get update
         sudo apt-get install -y sshpass
-
     - name: Mettre à jour le serveur
       run: |
         sshpass -p ${{ secrets.SSH_PASSWORD }} ssh loru6719@bolletje.o2switch.net "cd /home/loru6718/projets/good_bubble ; git pull"
