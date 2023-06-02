@@ -13,7 +13,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y sshpass
-    - name: Mettre à jour le serveur
+    - name: connection + Mettre à jour le serveur
       run: |
         sshpass -p ${{ secrets.SSH_PASSWORD }} 
         ssh loru6719@bolletje.o2switch.net 
