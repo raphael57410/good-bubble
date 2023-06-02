@@ -20,4 +20,4 @@ jobs:
 
     - name: Mettre à jour le serveur
       run: |
-        sshpass -p ${{ secrets.SSH_PASSWORD }} ssh loru6719@bolletje.o2switch.net "cd /home/loru6718/projets/good_bubble & git pull"
+        sshpass -p ${{ secrets.SSH_PASSWORD }} ssh loru6719@bolletje.o2switch.net "cd /home/loru6718/projets/good_bubble ; git pull"
