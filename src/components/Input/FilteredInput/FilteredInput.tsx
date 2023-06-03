@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import styles from '../input.module.scss'
 import { usePostStore } from '../../../store/postStore';
 import { shallow } from 'zustand/shallow';
