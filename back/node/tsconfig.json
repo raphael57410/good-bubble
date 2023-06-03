@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": ["es6"],
+    "esModuleInterop": true,
+    "module": "commonjs"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
