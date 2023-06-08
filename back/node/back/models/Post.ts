@@ -24,4 +24,4 @@ export interface IPostDocument extends Omit<IPostModel, "_id">, mongoose.Documen
 
 
 
-export const PostModel = mongoose.model<IPostDocument>('Post', Post);
+export const PostModel = mongoose.model<IPostDocument>('posts', Post);

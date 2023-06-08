@@ -12,12 +12,14 @@ require('dotenv').config();
 const user = process.env.USERName;
 const pass = process.env.PASS;
 const cluster = process.env.URL;
-const db = process.env.DB;
 
 
-mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.cohgx.mongodb.net/?retryWrites=true&w=majority`)
-    .then(() => console.log('connexion'))
-    .catch((e) => console.log(e, 'connexion failed'));
+
+// mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.cohgx.mongodb.net/?retryWrites=true&w=majority`)
+//     .then(() => console.log('connexion'))
+//     .catch((e) => console.log(e, 'connexion failed'));
+
+export const db = mongoose.connection;
 
 export const app = express();
 
@@ -32,7 +34,6 @@ app.use('/ping', (req, res) => {
 });
 createApiRouter(app);
 
-console.log(path.join(__dirname, 'public'));
 
 app.use('/static', express.static(path.join(__dirname, 'public/images')))
 

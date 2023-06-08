@@ -30,6 +30,17 @@ abstract class GenericCtrl<TModel, TDoc extends TModel & mongoose.Document> {
         }
 
     }
+
+    async delete(id: string) {
+
+        try {
+            const deleteData = await this.model.deleteOne({ id })
+            return deleteData;
+        } catch (err) {
+            console.log(err);
+        }
+
+    }
 }
 
 export default GenericCtrl;
