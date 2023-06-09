@@ -10,6 +10,7 @@ class ${capitalizeFirstLetter(name)}Router extends GenericRouter {
     constructor() {
         super();
         this.router.get('/', ${name}Ctrl.getAll${capitalizeFirstLetter(name)});
+        this.router.post('/add${capitalizeFirstLetter(name)}', ${name}Ctrl.add${capitalizeFirstLetter(name)});
     }
 }
 

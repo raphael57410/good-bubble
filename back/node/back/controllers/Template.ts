@@ -24,6 +24,17 @@ class ${firstLetterCapitalized}Ctrl extends GenericCtrl<I${firstLetterCapitalize
         }
     }
 
+    add${firstLetterCapitalized}: RequestHandler = async (_req: Request, res: Response) => {
+        const { body } = res.req
+
+        try {
+            const new${firstLetterCapitalized} = await this.add(body)
+            res.status(201).send(new${firstLetterCapitalized});
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
 }
 
 export const ${name}Ctrl = new ${firstLetterCapitalized}Ctrl();

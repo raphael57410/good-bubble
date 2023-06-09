@@ -3,7 +3,7 @@ import { routerTemplate } from '../routes/template'
 import { capitalizeFirstLetter } from '../utils/modifyString'
 
 const routePath = './back/routes/'
-const filePath = (name: string) => `${routePath}${name}/${capitalizeFirstLetter(name)}Router.ts`
+const filePath = (name: string) => `${routePath}${name}/${capitalizeFirstLetter(name)}Routes.ts`
 
 export const createRoutefn = (name: string) => {
 

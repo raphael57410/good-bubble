@@ -13,6 +13,7 @@ class AllCollectionsCtrl extends GenericCtrl<IPostModel, IPostDocument> {
 
     getAllCollections: RequestHandler = async (_req: Request, res: Response) => {
         try {
+
             // Fetch all collections
             const collections = await db.db.listCollections().toArray();
 
