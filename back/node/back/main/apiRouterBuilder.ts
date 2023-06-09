@@ -7,6 +7,7 @@ import { createRouter } from "../routes/create/create";
 import { totosRouter } from "../routes/totos/TotosRoutes";
 
 
+
 export const createApiRouter = (app: Express) => {
     const baseApiRouter = express.Router();
 

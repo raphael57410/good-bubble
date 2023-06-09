@@ -1,4 +1,3 @@
-import { postsCtrl } from "../../controllers/PostsCtrl";
 import GenericRouter from "../../_helpers/genericRouter";
 import { createCtrl } from "../../controllers/CreateCtrl";
 

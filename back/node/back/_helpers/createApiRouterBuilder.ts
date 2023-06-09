@@ -1,5 +1,4 @@
 import fs from 'fs'
-import { CtrlTemplate } from '../controllers/Template';
 import { capitalizeFirstLetter } from '../utils/modifyString';
 
 const routePath = './back/main/apiRouterBuilder.ts'

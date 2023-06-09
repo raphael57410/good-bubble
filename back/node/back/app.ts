@@ -2,7 +2,6 @@ import express from "express";
 import cors from 'cors'
 import path from "path";
 import mongoose from 'mongoose'
-import { postRouter } from "./routes/posts/postsRoutes";
 import listEndpoints from "express-list-endpoints";
 import { createApiRouter } from "./main/apiRouterBuilder";
 
