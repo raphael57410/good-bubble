@@ -15,9 +15,9 @@ const cluster = process.env.URL;
 
 
 
-// mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.cohgx.mongodb.net/?retryWrites=true&w=majority`)
-//     .then(() => console.log('connexion'))
-//     .catch((e) => console.log(e, 'connexion failed'));
+mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.cohgx.mongodb.net/?retryWrites=true&w=majority`)
+    .then(() => console.log('connexion'))
+    .catch((e) => console.log(e, 'connexion failed'));
 
 export const db = mongoose.connection;
 
