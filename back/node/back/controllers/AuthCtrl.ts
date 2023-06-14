@@ -1,9 +1,6 @@
 import { Request, RequestHandler, Response } from "express";
-import { createRoutefn } from "../_helpers/createRoute";
-import { createCtrlfn } from "../_helpers/createCtrl";
-import { TPropertiesArray, createModelfn } from "../_helpers/createModel";
-import { createApiRouterBuilder } from "../_helpers/createApiRouterBuilder";
 import { usersCtrl } from "./UsersCtrl";
+import { sign } from 'jsonwebtoken';
 
 
 type Body = {
@@ -20,11 +17,14 @@ class AuthCtrl {
         try {
 
             console.log(email, password);
-            const user = await usersCtrl.find('email', email)
+            const user = await usersCtrl.find('email', email);
 
-            console.log(user);
+            if (!user.length) throw res.status(404).send("Pas de user trouvé !")
 
-            res.status(201).send('created!')
+            //TODO: Secret need to be changed and put in .env file
+            const token = sign({ user: user }, 'secret');
+
+            res.status(201).send(token)
 
         } catch (err) {
             console.log(err);
