@@ -41,6 +41,17 @@ abstract class GenericCtrl<TModel, TDoc extends TModel & mongoose.Document> {
         }
 
     }
+
+    async find(propertie: any, value: string) {
+
+        try {
+            const findData = await this.model.find({ [propertie]: value })
+            return findData;
+        } catch (err) {
+            console.log(err);
+        }
+
+    }
 }
 
 export default GenericCtrl;

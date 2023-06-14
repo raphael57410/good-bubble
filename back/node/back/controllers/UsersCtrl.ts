@@ -19,6 +19,7 @@ class UsersCtrl extends GenericCtrl<IUsersModel, IUsersDocument> {
         }
     }
 
+
 }
 
 export const usersCtrl = new UsersCtrl();

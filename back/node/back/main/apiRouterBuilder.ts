@@ -5,6 +5,7 @@ import { usersRouter } from "../routes/users/usersRoutes";
 import { createRouter } from "../routes/create/create";
 
 import { totosRouter } from "../routes/totos/TotosRoutes";
+import { authRouter } from "../routes/auth/auth";
 
 
 
@@ -12,11 +13,12 @@ export const createApiRouter = (app: Express) => {
     const baseApiRouter = express.Router();
 
     baseApiRouter.use('/', allCollectionsRouter);
+    baseApiRouter.use('/auth', authRouter);
     baseApiRouter.use('/users', usersRouter);
     baseApiRouter.use('/posts', postRouter);
     baseApiRouter.use('/create', createRouter);
 
 
-baseApiRouter.use('/totos', totosRouter);
+    baseApiRouter.use('/totos', totosRouter);
     app.use('/api', baseApiRouter);
 }
